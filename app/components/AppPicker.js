@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     width: "100%",
     backgroundColor: colors.light,
     borderRadius: 25,
+    overflow: "scroll",
     flexDirection: "row",
     padding: 15,
     marginVertical: 10,

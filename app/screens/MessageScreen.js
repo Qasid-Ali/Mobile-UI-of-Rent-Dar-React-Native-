@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, FlatList, StyleSheet } from "react-native";
-import ListItems from "../components/lists/ListItemsListItems";
+import ListItems from "../components/lists/ListItems";
 import ScreenView from "../components/ScreenView";
 import ListItemSeperator from "../components/lists/ListItemSeperator";
 import ListItemDeleteAction from "../components/lists/ListItemDeleteAction";

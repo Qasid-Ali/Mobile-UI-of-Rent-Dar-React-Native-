@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "center",
-    marginTop: 50,
+    marginTop: 20,
     marginBottom: 20,
   },
 });

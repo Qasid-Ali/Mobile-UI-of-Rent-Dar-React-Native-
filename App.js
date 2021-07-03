@@ -1,21 +1,52 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from "react";
+
+import { View, StyleSheet, TextInput, Card } from "react-native";
+import AddItemListing from "./app/screens/AddItemListing";
+
+import * as ImagePicker from "expo-image-picker";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AddItemListing />
+    // <ScreenView>
+    //   <AppPicker
+    //     selectedItem={category}
+    //     onSelectedItem={(item) => setCategory(item)}
+    //     items={categories}
+    //     icon="apps"
+    //     placeholder="Category"
+    //   />
+    //   <AppTextInput placeholder="Email" icon="email" />
+    // </ScreenView>
+    // <ListingsScreen />
+
+    // <ScreenView>
+    //   <ListItems title="Mu sdsdsd" imageComponent={<Icon name="email" />} />
+    //   <ListItems
+    //     title="Mu sdsdsd"
+    //     subTitle="muy aasasasas"
+    //     imageComponent={<Icon name="trash-can" />}
+    //   />
+    // </ScreenView>
+    //<ListingDetailScreen />
+    // <View style={styles.backgroundCard}>
+    //   <AddCard
+    //     title="Aasasas"
+    //     subTitle="$1000"
+    //     image={require("./app/assets/chair.jpg")}
+    //   />
+    // </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  textInput: {
+    borderBottomColor: "#ccc",
+    borderBottomWidth: 1,
   },
+  // backgroundCard: {
+  //   backgroundColor: "#f8f4f4",
+  //   padding: 20,
+  //   paddingTop: 100,
+  // },
 });

@@ -3,12 +3,14 @@ import { FlatList, StyleSheet } from "react-native";
 
 import AddCard from "../components/AddCard";
 import ScreenView from "../components/ScreenView";
+import routes from "../navigation/routes";
 
 const listing = [
   {
     id: 1,
     title: "Red Jacket",
     price: 1000,
+    desc: "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
     image: require("../assets/jacket.jpg"),
   },
   {
@@ -17,9 +19,21 @@ const listing = [
     price: 2000,
     image: require("../assets/couch.jpg"),
   },
+  {
+    id: 3,
+    title: "Red Jacket",
+    price: 1000,
+    image: require("../assets/jacket.jpg"),
+  },
+  {
+    id: 4,
+    title: "Couch for sale",
+    price: 2000,
+    image: require("../assets/couch.jpg"),
+  },
 ];
 
-function ListingsScreen(props) {
+function ListingsScreen({ navigation }) {
   return (
     <ScreenView style={styles.screen}>
       <FlatList
@@ -28,8 +42,10 @@ function ListingsScreen(props) {
         renderItem={({ item }) => (
           <AddCard
             title={item.title}
-            subTitle={item.price}
+            subTitle={"$" + item.price}
             image={item.image}
+            desc={item.desc}
+            onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
           />
         )}
       />

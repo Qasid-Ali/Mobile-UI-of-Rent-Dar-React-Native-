@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { ScrollView, StyleSheet } from "react-native";
 import * as Yup from "yup";
 
 import AppForm from "../components/forms/AppForm";
@@ -14,6 +14,7 @@ const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
   price: Yup.number().required().min(1).max(10000).label("Price"),
   description: Yup.string().label("Description"),
+  condition: Yup.string().required().min(1).label("Condition"),
   category: Yup.object().required().nullable().label("Category"),
   images: Yup.array().min(1, "Please Select atleast one image"),
 });
@@ -74,44 +75,47 @@ const categories = [
     value: 9,
   },
 ];
-
 function AddItemListing() {
   return (
     <ScreenView style={styles.container}>
-      <AppForm
-        initialValues={{
-          title: "",
-          price: "",
-          description: "",
-          category: null,
-          images: [],
-        }}
-        onSubmit={(values) => console.log(values)}
-        validationSchema={validationSchema}
-      >
-        <FormImagePicker name="images" />
-        <FormField maxLength={255} name="title" placeholder="Title" />
-        <FormField
-          keyboardType="numeric"
-          maxLength={8}
-          name="price"
-          placeholder="Price"
-        />
-        <FormPicker
-          items={categories}
-          name="category"
-          PickerItemComponent={CategoryPickerItem}
-          placeholder="Category"
-        />
-        <FormField
-          maxLength={255}
-          multiline
-          name="description"
-          numberOfLines={3}
-          placeholder="Description"
-        />
-        <SubmitButton title="Post" />
-      </AppForm>
+      <ScrollView>
+        <AppForm
+          initialValues={{
+            title: "",
+            price: "",
+            description: "",
+            condition: "",
+            category: null,
+            images: [],
+          }}
+          onSubmit={(values) => console.log(values)}
+          validationSchema={validationSchema}
+        >
+          <FormImagePicker name="images" />
+          <FormField maxLength={255} name="title" placeholder="Title" />
+          <FormField
+            keyboardType="numeric"
+            maxLength={8}
+            name="price"
+            placeholder="Price"
+          />
+          <FormPicker
+            items={categories}
+            name="category"
+            PickerItemComponent={CategoryPickerItem}
+            placeholder="Category"
+          />
+          <FormField maxLength={255} name="condition" placeholder="Condition" />
+          <FormField
+            maxLength={255}
+            multiline
+            name="description"
+            numberOfLines={3}
+            placeholder="Description"
+          />
+          <SubmitButton title="Post" />
+        </AppForm>
+      </ScrollView>
     </ScreenView>
   );
 }

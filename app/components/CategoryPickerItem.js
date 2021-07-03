@@ -10,7 +10,7 @@ function CategoryPickerItem({ item, onPress }) {
         <Icon
           backgroundColor={item.backgroundColor}
           name={item.icon}
-          size={80}
+          size={60}
         />
       </TouchableOpacity>
       <Text style={styles.label}>{item.label}</Text>
