@@ -1,13 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { View, StyleSheet, TextInput, Card } from "react-native";
-import AddItemListing from "./app/screens/AddItemListing";
+import { NavigationContainer } from "@react-navigation/native";
 
-import * as ImagePicker from "expo-image-picker";
+import navigationTheme from "./app/navigation/navigationTheme";
+import AppNavigator from "./app/navigation/AppNavigator";
+import AuthNavigator from "./app/navigation/AuthNavigator";
+import CategoryNavigator from "./app/navigation/CategoryNavigator";
+import AddItemListing from "./app/screens/AddItemListing";
 
 export default function App() {
   return (
     <AddItemListing />
+    // <NavigationContainer theme={navigationTheme}>
+    //   <AuthNavigator />
+    // </NavigationContainer>
     // <ScreenView>
     //   <AppPicker
     //     selectedItem={category}
