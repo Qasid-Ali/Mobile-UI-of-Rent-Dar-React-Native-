@@ -16,7 +16,7 @@ function AddCard({ title, subTitle, desc, image, onPress }) {
         <View style={styles.detailContainer}>
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.subTitle}>{subTitle}</Text>
-          <Text>{desc}</Text>
+          {desc && <Text>{desc}</Text>}
         </View>
       </View>
     </TouchableWithoutFeedback>
@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   image: {
-    width: "50%",
-    height: 100,
+    width: "100%",
+    height: 200,
   },
   subTitle: {
     marginVertical: 10,

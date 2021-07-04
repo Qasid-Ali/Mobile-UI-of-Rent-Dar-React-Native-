@@ -8,28 +8,24 @@ import routes from "../navigation/routes";
 const listing = [
   {
     id: 1,
-    title: "Red Jacket",
-    price: 1000,
-    desc: "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
-    image: require("../assets/jacket.jpg"),
+    title: "Bike For Rent ",
+    price: "100/hr",
+    desc: "Unique 2009 good condition complete Docment",
+    image: require("../assets/bike.png"),
   },
   {
     id: 2,
-    title: "Couch for sale",
-    price: 2000,
+    title: "Couch for Rent ",
+    price: "1000/day",
+    desc: "Good couch",
     image: require("../assets/couch.jpg"),
   },
   {
     id: 3,
-    title: "Red Jacket",
-    price: 1000,
-    image: require("../assets/jacket.jpg"),
-  },
-  {
-    id: 4,
-    title: "Couch for sale",
-    price: 2000,
-    image: require("../assets/couch.jpg"),
+    title: "Mehran Car",
+    price: "500/hr",
+    desc: "Mehran car 2010 Model good condition complete Docment",
+    image: require("../assets/car.png"),
   },
 ];
 
@@ -44,7 +40,7 @@ function ListingsScreen({ navigation }) {
             title={item.title}
             subTitle={"$" + item.price}
             image={item.image}
-            desc={item.desc}
+            // desc={item.desc}
             onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
           />
         )}

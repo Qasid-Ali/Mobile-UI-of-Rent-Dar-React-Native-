@@ -9,6 +9,7 @@ import routes from "../navigation/routes";
 
 const menuItems = [
   {
+    id: 1,
     title: "My Listing",
     icon: {
       name: "format-list-bulleted",
@@ -16,12 +17,31 @@ const menuItems = [
     },
   },
   {
+    id: 2,
     title: "My Messaging",
     icon: {
       name: "email",
       backgroundColor: colors.secondary,
     },
     targetScreen: routes.MESSAGES,
+  },
+  {
+    id: 3,
+    title: "My Order",
+    icon: {
+      name: "calendar",
+      backgroundColor: colors.red,
+    },
+    targetScreen: routes.MESSAGES,
+  },
+  {
+    id: 4,
+    title: "Requested Item ",
+    icon: {
+      name: "tag",
+      backgroundColor: colors.medium,
+    },
+    targetScreen: routes.LISTINGS,
   },
 ];
 
@@ -32,7 +52,7 @@ function AccountScreen({ navigation }) {
         <ListItems
           title="Qasid Ali"
           subTitle="rajaqasidali856@gmail.com"
-          image={require("../assets/mosh.jpg")}
+          image={require("../assets/icon.png")}
         />
       </View>
       <View style={styles.container}>

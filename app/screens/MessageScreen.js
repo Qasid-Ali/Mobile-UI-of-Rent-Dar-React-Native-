@@ -8,21 +8,21 @@ import ListItemDeleteAction from "../components/lists/ListItemDeleteAction";
 const initialMessage = [
   {
     id: 1,
-    title: "First Item",
+    title: "username123",
     description: "Good.How are You",
-    image: require("../assets/mosh.jpg"),
+    image: require("../assets/icon.png"),
   },
   {
     id: 2,
-    title: "Second Item",
+    title: "username123",
     description: "Good.How are You",
-    image: require("../assets/mosh.jpg"),
+    image: require("../assets/icon.png"),
   },
   {
     id: 3,
-    title: "Third Item",
+    title: "username123",
     description: "Good.How are You",
-    image: require("../assets/mosh.jpg"),
+    image: require("../assets/icon.png"),
   },
 ];
 

@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import AccountNavigator from "./AccountNavigator";
-import FeedNavigator from "./FeedNavigator";
+import HomeNavigator from "./HomeNavigator";
 import AddItemListing from "../screens/AddItemListing";
 import NewListingButton from "./NewListingButton";
 import routes from "./routes";
@@ -14,7 +14,7 @@ const AppNavigator = () => (
   <Tab.Navigator>
     <Tab.Screen
       name="Feed"
-      component={FeedNavigator}
+      component={HomeNavigator}
       options={{
         tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons name="home" color={color} size={size} />

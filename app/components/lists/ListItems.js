@@ -9,12 +9,13 @@ function ListItems({
   image,
   imageComponent,
   onPress,
+  style,
   renderRightActions,
 }) {
   return (
     <Swipeable renderRightActions={renderRightActions}>
       <TouchableOpacity onPress={onPress}>
-        <View style={styles.container}>
+        <View style={[styles.container, style]}>
           {imageComponent}
           {image && <Image style={styles.image} source={image} />}
           <View style={styles.detailContainer}>
